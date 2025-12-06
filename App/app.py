@@ -4,9 +4,11 @@ import numpy as np
 from sklearn.ensemble import RandomForestClassifier
 import joblib
 import os
+from PIL import Image
 model_path = os.path.join(os.path.dirname(__file__), 'random_forest_model.joblib')
 model = joblib.load(model_path)
-
+logo_path = os.path.join(os.path.dirname(__file__), 'logo and name.png')
+logo = Image.open(logo_path)
 # Define the feature columns
 feature_columns = [
     'age', 'hypertension', 'heart_disease', 'avg_glucose_level', 'bmi',
@@ -18,8 +20,12 @@ feature_columns = [
 ]
 
 # Streamlit app
-st.title("Stroke Prediction App")
-st.write("Enter your personal data to predict your stroke status.")
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    st.image(logo, width=300)
+
+#st.title("Stroke Prediction App")
+st.write("Enter your personal data to predict the probability you may have a Stroke in the future.")
 
 age = st.number_input("Age", min_value=0, max_value=120)
 gender = st.selectbox("Gender", ["", "Male", "Female", "Other"])
