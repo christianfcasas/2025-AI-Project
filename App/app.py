@@ -26,7 +26,7 @@ feature_columns = [
 st.markdown(
     """
     <div style='text-align: center;'>
-        <img src='https://github.com/christianfcasas/2025-AI-Project/tree/main/App/logo and name.png' width='200'>
+        <img src='https://raw.githubusercontent.com/christianfcasas/2025-AI-Project/main/App/logo%20and%20name.png' width='200'>
     </div>
     """,
     unsafe_allow_html=True
