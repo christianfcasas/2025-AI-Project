@@ -22,7 +22,7 @@ feature_columns = [
 # Streamlit app
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-    st.image(logo, width=300)
+    st.image(logo, width=150)
 
 #st.title("Stroke Prediction App")
 st.write("Enter your personal data to predict the probability you may have a Stroke in the future.")
