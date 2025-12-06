@@ -32,6 +32,8 @@ st.markdown(
     unsafe_allow_html=True
 )
 #st.title("Stroke Prediction App")
+st.write("")
+st.write("")
 st.write("Enter your personal data to predict the probability you may have a Stroke in the future.")
 
 age = st.number_input("Age", min_value=0, max_value=120)
