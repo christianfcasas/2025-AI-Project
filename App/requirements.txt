@@ -8,3 +8,5 @@ seaborn
 imblearn
 os
 joblib
+RandomForestClassifier
+sklearn.ensemble
