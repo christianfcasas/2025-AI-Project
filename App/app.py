@@ -5,8 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 
 # Load the trained model (ensure the model is saved as a .pkl file)
-model_path = os.path.join(os.path.dirname(__file__), 'random_forest_model.joblib')
-model = joblib.load(model_path)
+model = joblib.load('random_forest_model.joblib')
 
 # Define the feature columns
 feature_columns = [
