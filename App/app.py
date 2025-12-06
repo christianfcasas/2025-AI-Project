@@ -20,10 +20,17 @@ feature_columns = [
 ]
 
 # Streamlit app
-col1, col2, col3 = st.columns([1, 2, 1])
-with col2:
-    st.image(logo, width=150)
-
+#col1, col2, col3 = st.columns([1, 2, 1])
+#with col2:
+    #st.image(logo, width=150)
+st.markdown(
+    """
+    <div style='text-align: center;'>
+        <img src='https://github.com/christianfcasas/2025-AI-Project/tree/main/App/logo and name.png' width='200'>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 #st.title("Stroke Prediction App")
 st.write("Enter your personal data to predict the probability you may have a Stroke in the future.")
 
