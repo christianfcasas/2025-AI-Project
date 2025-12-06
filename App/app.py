@@ -7,8 +7,8 @@ import os
 from PIL import Image
 model_path = os.path.join(os.path.dirname(__file__), 'random_forest_model.joblib')
 model = joblib.load(model_path)
-logo_path = os.path.join(os.path.dirname(__file__), 'logo and name.png')
-logo = Image.open(logo_path)
+#logo_path = os.path.join(os.path.dirname(__file__), 'logo and name.png')
+#logo = Image.open(logo_path)
 # Define the feature columns
 feature_columns = [
     'age', 'hypertension', 'heart_disease', 'avg_glucose_level', 'bmi',
