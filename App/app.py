@@ -21,25 +21,17 @@ feature_columns = [
 st.title("Stroke Prediction App")
 st.write("Enter your personal data to predict your stroke status.")
 
-col1, col2 = st.columns(2)
-# Input fields for user data
-with col1:
-    gender = st.selectbox("Gender", ["", "Male", "Female", "Other"])
-    avg_glucose_level = st.number_input("Average Glucose Level", min_value=0.0)
-    hypertension = st.selectbox("Hypertension (0 = No, 1 = Yes)", ["","Yes", "No"])
-    
-    residence_type = st.selectbox("Residence Type", ["", "Urban", "Rural"])
-    smoking_status = st.selectbox("Smoking Status", ["","never smoked", "formerly smoked", "smokes", "Unknown"])
-    
-    
+age = st.number_input("Age", min_value=0, max_value=120)
+gender = st.selectbox("Gender", ["", "Male", "Female", "Other"])
+bmi = st.number_input("BMI", min_value=0.0)
+avg_glucose_level = st.number_input("Average Glucose Level", min_value=0.0)
+heart_disease = st.selectbox("Heart Disease (0 = No, 1 = Yes)", ["","Yes", "No"])
+hypertension = st.selectbox("Hypertension (0 = No, 1 = Yes)", ["","Yes", "No"])
+work_type = st.selectbox("Work Type", ["","Private", "Self-employed", "Govt_job", "Never_worked", "No - Children"])
+residence_type = st.selectbox("Residence Type", ["", "Urban", "Rural"])
+smoking_status = st.selectbox("Smoking Status", ["","never smoked", "formerly smoked", "smokes", "Unknown"])
+ever_married = st.selectbox("Ever Married", ["","Yes", "No"])
 
-with col2:
-    age = st.number_input("Age", min_value=0, max_value=120)
-    bmi = st.number_input("BMI", min_value=0.0)
-    heart_disease = st.selectbox("Heart Disease (0 = No, 1 = Yes)", ["","Yes", "No"])
-    work_type = st.selectbox("Work Type", ["","Private", "Self-employed", "Govt_job", "Never_worked", "No - Children"])
-    ever_married = st.selectbox("Ever Married", ["","Yes", "No"])
-    
 
 # Convert user input into a DataFrame
 user_data = pd.DataFrame({
